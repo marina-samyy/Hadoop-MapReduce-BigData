@@ -1,0 +1,14 @@
+run without compiner 
+hadoop jar MovieRating.jar driver.CacheDriver \
+/user/cloudera/input/ratings.txt \
+/user/cloudera/output1 false
+
+
+run with 
+hadoop jar MovieRating.jar driver.CacheDriver \
+/user/cloudera/input/ratings.txt \
+/user/cloudera/output2 true
+
+
+hdfs dfs -cat /user/cloudera/output1/part-r-00000
+hdfs dfs -cat /user/cloudera/output2/part-r-00000
